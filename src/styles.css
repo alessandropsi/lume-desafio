@@ -1,0 +1,92 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-muted: var(--surface);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary: var(--surface);
+  --color-secondary-foreground: var(--foreground);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--foreground);
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--foreground);
+  --color-accent: var(--surface);
+  --color-accent-foreground: var(--foreground);
+  --color-primary: var(--foreground);
+  --color-primary-foreground: var(--background);
+  --color-border: var(--divider);
+  --color-input: var(--divider);
+  --color-ring: var(--risk);
+  --color-risk: var(--risk);
+  --color-positive: var(--positive);
+  --color-gold: var(--gold);
+  --color-divider: var(--divider);
+  --color-destructive: var(--risk);
+  --color-destructive-foreground: var(--foreground);
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 4px;
+  --background: #0B1210;
+  --surface: #131F1B;
+  --foreground: #EDF2EF;
+  --muted-foreground: #8FA39B;
+  --risk: #E8694A;
+  --positive: #4FD1A5;
+  --gold: #C9A961;
+  --divider: #243530;
+}
+
+.dark {
+  --background: #0B1210;
+  --surface: #131F1B;
+  --foreground: #EDF2EF;
+  --muted-foreground: #8FA39B;
+  --risk: #E8694A;
+  --positive: #4FD1A5;
+  --gold: #C9A961;
+  --divider: #243530;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html, body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.6875rem;
+    color: var(--muted-foreground);
+    font-weight: 500;
+  }
+}
