@@ -5,7 +5,8 @@ import { nitro } from 'nitro/vite'
 
 export default defineConfig({
   plugins: [
-  tanstackStart(),
-  react(),
-]
+    tanstackStart(),
+    viteReact(),
+    nitro(),
+  ],
 })
